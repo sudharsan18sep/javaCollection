@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Iterator;
 
 class Main {
     public static void main(String[] args) {
@@ -32,7 +33,25 @@ class Main {
         //check exist its case sensitive
         System.out.println(names.contains("Sudha"));
         
+        names.add("Vegeta");
+        names.add("goku");
+        //for loop
+        for(int i =0; i <names.size();i++){
+            System.out.println(names.get(i));
+        }
         
+        //enhanced for loop
+        for(String s : names){
+            System.out.println(s);
+        }
+        
+        //for each lamba
+        names.forEach(f -> System.out.println(f));
+        
+        //iterator
+        Iterator<String> it = names.iterator();
+        while(it.hasNext()){
+            System.out.println(it.next());
+        }
         
     }
-}
