@@ -1,6 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Iterator;
+import java.util.Collections;
 
 class Main {
     public static void main(String[] args) {
@@ -53,5 +54,30 @@ class Main {
         while(it.hasNext()){
             System.out.println(it.next());
         }
+        //
         
+        //collection
+        names.add("Goku");
+        //All uppercase letters (A–Z) come before lowercase letters (a–z) in Unicode/ASCII
+        Collections.sort(names);
+        System.out.println("After sorting");
+        names.forEach(f ->System.out.println(f));
+        
+        //descending order
+        
+        Collections.sort(names, Collections.reverseOrder());
+        names.forEach(f -> System.out.println(f));
+        
+        //convert array to arraylist
+        //ArrayList<String> list = new ArrayList<>(Arrays.asList(arr));
+        //covnert arraylist to array
+        //String[] arr = list.toArray(new String[0]);
+        
+        //sublist
+        System.out.println(names.subList(0,2));
+        //Remove all A-B
+        //list1.removeAll(list2)
+        //intersection 
+        //list1.retainAll(list2)
     }
+}
